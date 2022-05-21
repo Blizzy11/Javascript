@@ -1,0 +1,109 @@
+/* .poster img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    object-position: 0 60%;
+}
+
+.poster {
+    position: relative;
+}
+
+.poster span {
+    position: absolute;
+    top: 20px;
+} */
+.poster {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.poster::after {
+    content: "";
+    top: 0;
+    background-image: url(/img/header.jpg);
+    background-attachment: fixed;
+    opacity: 1;
+    z-index: -3;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 0 120%;
+}
+
+.poster span {
+    font-size: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.poster p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+/* Responsive poster img */
+@media (max-width: 1000px) {
+    .poster p {
+        text-align-last: left;
+        font-size: 15px;
+    }
+}
+@media (max-width: 700px) {
+    .poster::after {
+    content: "";
+    top: 0;
+    background-image: url(/img/header.jpg);
+    opacity: 1;
+    z-index: -3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 0 60%;
+    }
+}
+@media (max-width: 390px) {
+    .poster::after {
+    content: "";
+    top: 0;
+    background-image: url(/img/header.jpg);
+    opacity: 1;
+    z-index: -3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 0 60%;
+    }
+}
+
+
+/* ------------------- */
+/* Maein konten Section */
+/* ------------------- */
+/* .main .section1 {
+    float: left;
+    position: relative;
+    width: 1200px;
+}
+
+.main .container {
+    position: absolute;
+    margin-left: 1000px;
+    width: 30%;
+    border: 2px solid black;
+} */
+
+.container{
+    width: 100%;
+}
+
+.container-fluid img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
